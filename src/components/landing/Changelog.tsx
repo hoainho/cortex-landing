@@ -29,7 +29,7 @@ const RELEASES: Release[] = [
     date: 'March 2026',
     tagline: 'Multi-Agent AI with Memory, Skills & Self-Learning',
     latest: true,
-    downloadUrl: 'https://github.com/hoainho/cortex/releases/latest/download/Cortex-2.0.0.dmg',
+    downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v2.0.0/Cortex-2.0.0-arm64.dmg',
     groups: [
       {
         icon: Bot,
