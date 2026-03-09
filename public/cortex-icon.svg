@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B34A19"/>
+      <stop offset="100%" style="stop-color:#E08A5E"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- Brain icon - stylized neural network -->
+  <g transform="translate(256, 256)" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Central node -->
+    <circle cx="0" cy="0" r="24" fill="white" stroke="none" opacity="0.95"/>
+    <!-- Neural paths -->
+    <path d="M0 -24 L0 -72 Q0 -96 -24 -108 L-60 -120" opacity="0.9"/>
+    <path d="M0 -24 L0 -72 Q0 -96 24 -108 L60 -120" opacity="0.9"/>
+    <path d="M24 0 L72 0 Q96 0 108 -24 L120 -60" opacity="0.9"/>
+    <path d="M24 0 L72 0 Q96 0 108 24 L120 60" opacity="0.9"/>
+    <path d="M0 24 L0 72 Q0 96 24 108 L60 120" opacity="0.9"/>
+    <path d="M0 24 L0 72 Q0 96 -24 108 L-60 120" opacity="0.9"/>
+    <path d="M-24 0 L-72 0 Q-96 0 -108 -24 L-120 -60" opacity="0.9"/>
+    <path d="M-24 0 L-72 0 Q-96 0 -108 24 L-120 60" opacity="0.9"/>
+    <!-- Outer nodes -->
+    <circle cx="-60" cy="-120" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="60" cy="-120" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="120" cy="-60" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="120" cy="60" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="60" cy="120" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="-60" cy="120" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="-120" cy="-60" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <circle cx="-120" cy="60" r="16" fill="white" stroke="none" opacity="0.8"/>
+    <!-- Cross connections for brain feel -->
+    <path d="M-60 -120 Q0 -80 60 -120" opacity="0.4" stroke-width="6"/>
+    <path d="M120 -60 Q80 0 120 60" opacity="0.4" stroke-width="6"/>
+    <path d="M60 120 Q0 80 -60 120" opacity="0.4" stroke-width="6"/>
+    <path d="M-120 60 Q-80 0 -120 -60" opacity="0.4" stroke-width="6"/>
+  </g>
+</svg>

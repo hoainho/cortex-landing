@@ -1,0 +1,76 @@
+import { motion } from 'framer-motion'
+import { GitBranch, Brain, MessageSquare } from 'lucide-react'
+import { SectionWrapper, SectionHeader } from './SectionWrapper'
+
+const steps = [
+  {
+    icon: GitBranch,
+    step: '01',
+    title: 'Import',
+    description:
+      'Connect any GitHub repository — public or private. Or point to a local folder. Cortex fetches and indexes everything.',
+    detail: 'Supports monorepos, multiple repos per workspace, and private repos with GitHub token authentication.',
+  },
+  {
+    icon: Brain,
+    step: '02',
+    title: 'Learn',
+    description:
+      'AI analyzes your entire codebase — architecture, APIs, database schemas, business logic, and dependency graphs.',
+    detail: 'Creates a structured knowledge graph with vector embeddings. Re-learns incrementally when your code changes.',
+  },
+  {
+    icon: MessageSquare,
+    step: '03',
+    title: 'Ask',
+    description:
+      'Get instant, accurate answers. Switch between Product mode for business context or Engineering mode for deep technical details.',
+    detail: 'Each project gets its own isolated Brain with a unique AI-generated name representing its domain.',
+  },
+]
+
+export function HowItWorks() {
+  return (
+    <SectionWrapper id="how-it-works">
+      <SectionHeader
+        label="How It Works"
+        title="From Repo to Intelligence in Minutes"
+        description="Three simple steps to give your team a brain that knows every line of your codebase."
+      />
+
+      <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+        {steps.map((step, i) => (
+          <motion.div
+            key={step.step}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.5, delay: i * 0.15 }}
+            className="card-glow group rounded-2xl border border-border bg-bg-card p-9 hover:bg-bg-card-hover transition-colors"
+          >
+            <div className="flex items-center gap-4 mb-7">
+              <div className="w-14 h-14 rounded-xl bg-accent-glow flex items-center justify-center group-hover:bg-accent-glow-strong transition-colors">
+                <step.icon size={22} className="text-accent" />
+              </div>
+              <span className="text-[13px] font-mono text-text-tertiary font-medium">
+                Step {step.step}
+              </span>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-text-primary">
+              {step.title}
+            </h3>
+
+            <p className="text-text-secondary text-[15px] leading-relaxed mb-5">
+              {step.description}
+            </p>
+
+            <p className="text-text-tertiary text-[13px] leading-relaxed">
+              {step.detail}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </SectionWrapper>
+  )
+}
