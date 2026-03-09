@@ -3,6 +3,7 @@ import { Hero } from './components/landing/Hero'
 import { HowItWorks } from './components/landing/HowItWorks'
 import { TwoModes } from './components/landing/TwoModes'
 import { Features } from './components/landing/Features'
+import { Changelog } from './components/landing/Changelog'
 import { Security } from './components/landing/Security'
 import { Footer } from './components/landing/Footer'
 
@@ -14,6 +15,7 @@ export default function App() {
       <HowItWorks />
       <TwoModes />
       <Features />
+      <Changelog />
       <Security />
       <Footer />
     </div>

@@ -29,6 +29,9 @@ export function Navbar() {
           <a href="#features" className="hover:text-text-primary transition-colors">
             Features
           </a>
+          <a href="#changelog" className="hover:text-text-primary transition-colors">
+            Changelog
+          </a>
           <a href="#security" className="hover:text-text-primary transition-colors">
             Security
           </a>
