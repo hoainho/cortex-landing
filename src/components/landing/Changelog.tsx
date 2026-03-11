@@ -25,10 +25,58 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '3.0.0',
+    date: 'March 2026',
+    tagline: 'Agent Mode Overhaul, GitLab-first Routing & V3 Hook Engine',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v3.0.0/Cortex-3.0.0-arm64.dmg',
+    groups: [
+      {
+        icon: Bot,
+        title: 'Agent Mode Overhaul',
+        items: [
+          'Agent system prompts hidden from chat — only user input visible',
+          'OpenCode-style mode directives: analyze-mode, search-mode, todo-continuation',
+          'Backend agent injection via AGENT_MODE_CONFIGS',
+          'agentModeId passed separately through full IPC pipeline',
+        ],
+      },
+      {
+        icon: Cpu,
+        title: 'Smart Routing & GitLab Priority',
+        items: [
+          'GitLab models at T10 (highest) — always preferred when available',
+          'Category-based model routing with confidence scoring',
+          'Model cache invalidation on proxy config change',
+          'Auto-rotation with 10-tier model quality ranking',
+        ],
+      },
+      {
+        icon: Wrench,
+        title: 'V3 Hook Engine',
+        items: [
+          'Before/after chat hooks: cost-guard, cache-check, context-window-monitor',
+          'Loop engine: Ralph loop, Ultrawork loop with boulder state persistence',
+          'Background task manager with priority queue and concurrency control',
+          'Agent capabilities system with tool whitelist per role',
+        ],
+      },
+      {
+        icon: Sparkles,
+        title: 'UX Improvements',
+        items: [
+          'Settings save feedback — success/error notifications',
+          'Dark mode as default theme',
+          'macOS dock name fix for dev mode',
+          'Landing page V3 with feature highlights grid',
+        ],
+      },
+    ],
+  },
+  {
     version: '2.0.0',
     date: 'March 2026',
     tagline: 'Multi-Agent AI with Memory, Skills & Self-Learning',
-    latest: true,
     downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v2.0.0/Cortex-2.0.0-arm64.dmg',
     groups: [
       {

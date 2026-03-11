@@ -14,7 +14,7 @@ export function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
-              href="https://github.com/hoainho/cortex/releases/download/v2.0.0/Cortex-2.0.0-arm64.dmg"
+              href="https://github.com/hoainho/cortex/releases/download/v3.0.0/Cortex-3.0.0-arm64.dmg"
               id="download"
               className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-white font-semibold text-[15px] hover:bg-accent-dark transition-all active:scale-[0.97] shadow-lg shadow-accent/20"
             >
@@ -52,7 +52,7 @@ export function Footer() {
             <a href="https://github.com/hoainho/cortex" target="_blank" rel="noopener noreferrer" className="hover:text-text-secondary transition-colors">
               GitHub
             </a>
-            <a href="https://github.com/hoainho/cortex/releases/download/v2.0.0/Cortex-2.0.0-arm64.dmg" className="hover:text-text-secondary transition-colors">
+            <a href="https://github.com/hoainho/cortex/releases/download/v3.0.0/Cortex-3.0.0-arm64.dmg" className="hover:text-text-secondary transition-colors">
               Download
             </a>
           </div>
