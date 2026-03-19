@@ -1,31 +1,39 @@
 import { motion } from 'framer-motion'
-import { GitBranch, Brain, MessageSquare } from 'lucide-react'
+import { GitBranch, Brain, Cpu, MessageSquare } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from './SectionWrapper'
 
 const steps = [
   {
     icon: GitBranch,
     step: '01',
-    title: 'Import',
+    title: 'Import & Index',
     description:
-      'Connect any GitHub repository — public or private. Or point to a local folder. Cortex fetches and indexes everything.',
-    detail: 'Supports monorepos, multiple repos per workspace, and private repos with GitHub token authentication.',
+      'Connect any GitHub repo or local folder. Cortex parses AST, creates vector embeddings (Voyage AI), and builds dependency graphs.',
+    detail: 'SQLite for FTS search, Qdrant for vector similarity. Incremental sync — only changed files re-indexed.',
   },
   {
     icon: Brain,
     step: '02',
-    title: 'Learn',
+    title: 'Understand & Route',
     description:
-      'AI analyzes your entire codebase — architecture, APIs, database schemas, business logic, and dependency graphs.',
-    detail: 'Creates a structured knowledge graph with vector embeddings. Re-learns incrementally when your code changes.',
+      'Smart Intent Classifier analyzes your query. Pipeline Router selects the optimal path: multi-agent orchestration, ReAct reasoning, or direct RAG.',
+    detail: 'Not keyword matching — LLM-based classification that detects intent, tool needs, and external info requirements.',
+  },
+  {
+    icon: Cpu,
+    step: '03',
+    title: 'Act & Verify',
+    description:
+      '12 agents + 25 tools execute in parallel. Code Advisor searches YOUR patterns. Vision analyzes images. Git tools answer team questions.',
+    detail: 'Systematic resolution: Investigate → Compare → Hypothesize → Verify. Never says "I don\'t know" without trying all tools first.',
   },
   {
     icon: MessageSquare,
-    step: '03',
-    title: 'Ask',
+    step: '04',
+    title: 'Remember & Learn',
     description:
-      'Get instant, accurate answers. Switch between Product mode for business context or Engineering mode for deep technical details.',
-    detail: 'Each project gets its own isolated Brain with a unique AI-generated name representing its domain.',
+      '3-tier memory persists across sessions. Self-learning tracks what you find useful and adjusts search weights over time.',
+    detail: 'Core memory (preferences), Archival memory (past decisions), Recall memory (conversation history).',
   },
 ]
 

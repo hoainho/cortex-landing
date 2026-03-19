@@ -1,43 +1,61 @@
 import { motion } from 'framer-motion'
-import { Github, Brain, ToggleLeft, Shield, RefreshCw, WifiOff } from 'lucide-react'
+import { Eye, Palette, Code, Users, Search, Shield, Brain, Zap, RefreshCw } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from './SectionWrapper'
 
 const features = [
   {
-    icon: Github,
-    title: 'GitHub Integration',
-    description:
-      'Import public and private repositories. Automatic token-based authentication with guided setup for private repos.',
-  },
-  {
     icon: Brain,
-    title: 'Brain Per Project',
+    title: '6-Layer Brain',
     description:
-      'Each project gets its own isolated AI brain with dedicated memory. No cross-project data contamination.',
+      'Understanding → Thinking → Acting → Remembering → Collaborating → Learning. Not a flat Q&A — a full reasoning pipeline.',
   },
   {
-    icon: ToggleLeft,
-    title: 'Dual Response Modes',
+    icon: Users,
+    title: '12 Specialized Agents',
     description:
-      'Switch between Product and Engineering modes instantly. Same question, tailored answer for different audiences.',
+      'Sisyphus (ultraworker), Hephaestus (debugger), Prometheus (planner), Atlas (heavy lifter), Oracle, Explore, Librarian + 5 specialists.',
+  },
+  {
+    icon: Code,
+    title: 'Code Advisor (TabNine-inspired)',
+    description:
+      'Searches YOUR codebase for patterns, detects YOUR naming conventions, generates code that matches YOUR style.',
+  },
+  {
+    icon: Eye,
+    title: 'Vision & Image Analysis',
+    description:
+      'Upload images → AI analysis, OCR, UI review, diagram understanding. Uses FREE OpenRouter vision models.',
+  },
+  {
+    icon: Palette,
+    title: 'AI Image Generation',
+    description:
+      '8 style presets: realistic, anime, watercolor, pixel-art, sketch, minimalist, oil-painting, cyberpunk.',
+  },
+  {
+    icon: Search,
+    title: '25+ Built-in Tools',
+    description:
+      'Git analysis, config search, grep, web search, code advisor, vision, artist — called automatically by the LLM.',
   },
   {
     icon: Shield,
-    title: 'Security First',
+    title: 'Privacy & Security',
     description:
-      'Zero cross-project data leakage. Prompt injection protection. Memory isolation enforced at the architecture level.',
+      'Code stays on your machine. API keys encrypted via macOS Keychain. Prompt injection detection. Sandboxed execution.',
+  },
+  {
+    icon: Zap,
+    title: 'Smart Pipeline',
+    description:
+      'Intent classifier → path router → orchestrate/skill_chain/RAG. Message queue serializes requests. Parallel tool execution.',
   },
   {
     icon: RefreshCw,
-    title: 'Incremental Learning',
+    title: 'Self-Learning',
     description:
-      'Re-sync your brain when the repository updates. Only changed files are re-processed — fast and efficient.',
-  },
-  {
-    icon: WifiOff,
-    title: 'Offline Ready',
-    description:
-      'Once indexed, your brain works without internet. All embeddings and knowledge stored locally on your machine.',
+      'Tracks your accepts, rejects, follow-ups. Learned reranker adjusts search weights. Gets smarter over time.',
   },
 ]
 

@@ -25,7 +25,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
           </span>
-          Now in Early Access
+          v3.2 — Vision, Code Advisor, Multi-Agent Pipeline
         </motion.div>
 
         <motion.h1
@@ -45,10 +45,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Import any GitHub repo. Cortex learns your architecture, APIs, and business logic
-          — then answers any question in{' '}
-          <span className="text-accent font-medium">Product</span> or{' '}
-          <span className="text-accent font-medium">Engineering</span> mode.
+          Not a ChatGPT wrapper. A 6-layer AI brain with{' '}
+          <span className="text-accent font-medium">12 agents</span>,{' '}
+          <span className="text-accent font-medium">25+ tools</span>, persistent memory,
+          and self-learning — built to understand YOUR codebase.
         </motion.p>
 
         <motion.div
@@ -58,7 +58,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <a
-            href="https://github.com/hoainho/cortex/releases/download/v3.0.0/Cortex-3.0.0-arm64.dmg"
+            href="https://github.com/hoainho/cortex/releases"
             className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-white font-semibold text-[15px] hover:bg-accent-dark transition-all active:scale-[0.97] shadow-lg shadow-accent/20"
           >
             <Download size={18} />

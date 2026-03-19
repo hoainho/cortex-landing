@@ -25,11 +25,61 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '3.2.0',
+    date: 'March 2026',
+    tagline: 'OmO Pipeline, Vision, Code Advisor, Superpowers Methodology',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: Brain,
+        title: 'OmO Pipeline Architecture',
+        items: [
+          'Chat Pipeline Engine: Sanitize → Intent → Route → Execute → Verify',
+          'Smart Intent Classifier (LLM-based, not keyword matching)',
+          '5 execution paths: orchestrate, skill_chain, standard, perplexity, slash_command',
+          'Plugin Config System (OmO-compatible JSONC)',
+        ],
+      },
+      {
+        icon: Sparkles,
+        title: 'Vision & Artist Skills',
+        items: [
+          'cortex_analyze_image — FREE image analysis via OpenRouter',
+          'cortex_compare_images — side-by-side comparison',
+          'cortex_generate_image — 8 style presets (anime, watercolor, pixel-art...)',
+          'cortex_edit_image — edit existing images with instructions',
+        ],
+      },
+      {
+        icon: Search,
+        title: 'Code Advisor (TabNine-inspired)',
+        items: [
+          'cortex_code_advisor — search patterns + detect conventions + style-matched suggestions',
+          'cortex_find_similar_code — "how is X done in this project?"',
+          'cortex_suggest_fix — error analysis + codebase pattern matching',
+          'cortex_explain_code_pattern — explain with real code examples',
+        ],
+      },
+      {
+        icon: Wrench,
+        title: 'Infrastructure',
+        items: [
+          'Message Queue — serializes requests per conversation',
+          'Voyage AI embeddings with token-based throttle (replaces Jina)',
+          'Drag-and-drop file upload with visual overlay',
+          'Parallel tool execution via Promise.all',
+          'Skill metrics persisted to SQLite (was in-memory only)',
+          'Superpowers methodology: systematic-resolution, response-verification, query-clarification',
+        ],
+      },
+    ],
+  },
+  {
     version: '3.0.0',
     date: 'March 2026',
     tagline: 'Agent Mode Overhaul, GitLab-first Routing & V3 Hook Engine',
-    latest: true,
-    downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v3.0.0/Cortex-3.0.0-arm64.dmg',
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
     groups: [
       {
         icon: Bot,
