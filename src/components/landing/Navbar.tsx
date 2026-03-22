@@ -48,7 +48,7 @@ export function Navbar() {
             GitHub
           </a>
           <a
-            href="https://github.com/hoainho/cortex/releases/download/v3.0.0/Cortex-3.0.0-arm64.dmg"
+            href="https://github.com/hoainho/cortex/releases/download/v4.0.0/Cortex-4.0.0-arm64.dmg"
             className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-white text-[13px] font-medium hover:bg-accent-dark transition-all active:scale-[0.97]"
           >
             <Download size={15} />

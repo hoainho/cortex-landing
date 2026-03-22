@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   Download, ChevronDown, ChevronRight,
-  Bot, Brain, Wrench, Shield, Gauge, Blocks,
-  Terminal, GitBranch, Search, Database, Cpu, Sparkles,
+  Bot, Brain, Wrench, Shield, Gauge, Blocks, Building,
+  Terminal, GitBranch, Search, Database, Cpu, Sparkles, Globe,
   type LucideIcon
 } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from './SectionWrapper'
@@ -25,10 +25,69 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '4.0.0',
+    date: 'March 2026',
+    tagline: 'GitHub Org Import, Hybrid Embedding, Smart Rate Limits',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: Building,
+        title: 'GitHub Organization Import',
+        items: [
+          'Bulk import all repos from a GitHub organization in one click',
+          'Auto-detect already-imported repos (skip duplicates)',
+          'Real-time progress bar: cloning, indexing, done per repo',
+          'Available in both New Project and Add Repository flows',
+        ],
+      },
+      {
+        icon: Globe,
+        title: 'Hybrid Embedding Strategy',
+        items: [
+          'GitHub Models embedding (text-embedding-3-small) — FREE with Copilot subscription',
+          'Voyage AI for bulk import (fast, 1500 RPM), GitHub for query/search (free, 14 RPM)',
+          'Per-provider throttle state — providers no longer share rate limit counters',
+          'Daily quota detection: stops gracefully, resumes on next sync',
+        ],
+      },
+      {
+        icon: Gauge,
+        title: 'Embedding Rate Limit Dashboard',
+        items: [
+          'Live rate limit monitoring per provider (RPM, daily usage, session total)',
+          'Progress bar with color coding: green/yellow/red by quota %',
+          'Recovery countdown when daily quota exhausted',
+          'Auto-refresh every 5 seconds',
+        ],
+      },
+      {
+        icon: Database,
+        title: 'Database & Migration Safety',
+        items: [
+          'Version-tracked migration system (schema_migrations table)',
+          'Fixed critical bug: DROP TABLE CASCADE deleting all chunks on every app restart',
+          'Foreign keys disabled during destructive migrations',
+          'Jira API migrated from deprecated /search to /search/jql (410 fix)',
+        ],
+      },
+      {
+        icon: Wrench,
+        title: 'Infrastructure',
+        items: [
+          'Git auth via -c args (fixes private repo 500 errors)',
+          'Smart architecture/diagram detection (no longer triggers DALL-E for "draw architecture")',
+          'GitLab/Duo model tier-10 priority with improved matching',
+          'Mermaid diagram rendering with proper scroll and sizing',
+          'Vietnamese diacritics restored across all UI text',
+        ],
+      },
+    ],
+  },
+  {
     version: '3.2.0',
     date: 'March 2026',
     tagline: 'OmO Pipeline, Vision, Code Advisor, Superpowers Methodology',
-    latest: true,
     downloadUrl: 'https://github.com/hoainho/cortex/releases',
     groups: [
       {

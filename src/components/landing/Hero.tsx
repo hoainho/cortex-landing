@@ -25,7 +25,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
           </span>
-          v3.2 — Vision, Code Advisor, Multi-Agent Pipeline
+          v4.0 — GitHub Org Import, Hybrid Embedding, Per-Provider Rate Limits
         </motion.div>
 
         <motion.h1
