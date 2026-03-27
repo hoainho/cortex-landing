@@ -25,7 +25,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
           </span>
-          v4.0 — GitHub Org Import, Hybrid Embedding, Per-Provider Rate Limits
+          v4.3 "Synapse" — Document Intelligence, Core Policies, Hardening
         </motion.div>
 
         <motion.h1
@@ -45,10 +45,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Not a ChatGPT wrapper. A 6-layer AI brain with{' '}
+          Not a ChatGPT wrapper. A 7-layer AI brain with{' '}
           <span className="text-accent font-medium">12 agents</span>,{' '}
-          <span className="text-accent font-medium">25+ tools</span>, persistent memory,
-          and self-learning — built to understand YOUR codebase.
+          <span className="text-accent font-medium">30+ tools</span>, persistent memory,
+          self-learning, and Document Intelligence — built to understand YOUR codebase.
         </motion.p>
 
         <motion.div

@@ -25,10 +25,140 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '4.3.0',
+    date: 'March 2026',
+    tagline: '"Synapse" — Document Intelligence, 10 Core Policies, Architecture Hardening',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: Database,
+        title: 'Document Intelligence',
+        items: [
+          'cortex_read_document — agents can read PDF, DOCX, XLSX, CSV, HTML at query time',
+          'Priority-based converter registry with graceful degradation (markitdown pattern)',
+          'Section-aware chunking by H1–H3 headers; new ChunkType "document"',
+          'Brain engine Phase 1.5: documents converted to markdown before embedding',
+          'DocumentMetadataHeader UI: file icon, filename, page/sheet/row count badges',
+        ],
+      },
+      {
+        icon: Brain,
+        title: 'Agent Brain Upgrade — 10 Core Policies',
+        items: [
+          'Distilled from Claude Code, Cursor v1–v2, Devin AI, Windsurf Cascade Wave 11',
+          '[autonomous-loop] — Work until COMPLETE, no premature stopping',
+          '[tool-first-policy] — NEVER guess; use tools to investigate',
+          '[parallel-execution] — All independent tool calls fired simultaneously',
+          '[anti-hallucination] — Never invent file names, APIs, or dependencies',
+          'All 15 agents upgraded with CORE_POLICIES',
+        ],
+      },
+      {
+        icon: Wrench,
+        title: 'Filesystem Tools Overhaul (4 → 9 tools)',
+        items: [
+          'cortex_read_files — batch read up to 10 files via Promise.all',
+          'cortex_grep_search — regex search, auto-skips node_modules/dist/binary',
+          'cortex_edit_files — batch apply multiple edits across multiple files',
+          'cortex_move_file + cortex_delete_file — safe rename and delete',
+          'cortex_read_file: 10MB limit, offset+limit chunk reading for large files',
+          'Progressive edit fallback: exact → whitespace-normalized → nearest-line hint',
+          'Unrestricted mode: AI can read/write any file on the machine (opt-in)',
+        ],
+      },
+      {
+        icon: Gauge,
+        title: 'Architecture Hardening',
+        items: [
+          'IPC Modules: main.ts split from 3075 lines into 9 domain modules',
+          'HybridVectorStore: unified interface, auto-selects Qdrant → SQLite with large-project warning',
+          'Circuit Breaker: timed open/half-open/close + daily budget guard ($0.50/day)',
+          'Graph Incremental Rebuild: rebuildGraphForFiles() on every sync (no stale graph)',
+          'Semantic Cache: auto-invalidated per-project after each sync',
+          'Bias Prevention: ROUGE-1 diversity, independent judge model, confidence decay',
+          'Brain Snapshot: auto-snapshot before re-index, restore to previous state',
+          'Ollama Embedding: local fallback provider (nomic-embed-text, works offline)',
+          'Resource Lock: multi-agent file write protection + OrchestrationBudget guard',
+        ],
+      },
+      {
+        icon: Cpu,
+        title: '429 Rate Limit Resilience',
+        items: [
+          'Dynamic model resolution: queries live model list instead of hardcoded names',
+          'Tier-based selection: fast → tier 1–5, balanced → tier 5–7, premium → tier 8–10',
+          'Auto-discover fallback: if no model in tier range → use any ready model',
+          'Exponential backoff with jitter (±30%) for all agent pool retries',
+          'Retry-After header support: waits exact server-specified duration',
+        ],
+      },
+    ],
+  },
+  {
+    version: '4.2.0',
+    date: 'March 2026',
+    tagline: '"Synapse" Preview — Document Intelligence + Agent Core Policies (initial release)',
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: Database,
+        title: 'Document Intelligence (Preview)',
+        items: [
+          'PDF → extracted text via pdf-parse',
+          'DOCX → mammoth.convertToHtml() → turndown → clean markdown',
+          'XLSX/XLS → per-sheet markdown tables',
+          'CSV → RFC 4180 compliant parser (handles quoted fields with embedded commas)',
+          'HTML/HTM → turndown with title extraction',
+        ],
+      },
+      {
+        icon: Brain,
+        title: 'Core Policies (Preview)',
+        items: [
+          'SUPERPOWERS_CORE injected into all agent modes + default path',
+          '[systematic-resolution] — 4-phase: Investigate → Compare → Hypothesize → Verify',
+          '[response-verification] — 5-point quality gate before each response',
+          '[query-clarification] — Proposes 2–3 approaches instead of asking 5+ questions',
+        ],
+      },
+    ],
+  },
+  {
+    version: '4.1.0',
+    date: 'March 2026',
+    tagline: 'Filesystem Tools Overhaul + Unrestricted Mode + Agent Pool Resilience',
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: Wrench,
+        title: 'Filesystem Tools (4 → 9 tools)',
+        items: [
+          'cortex_read_files — batch parallel I/O via Promise.all',
+          'cortex_grep_search — regex across entire project, auto-skips binaries',
+          'cortex_edit_files — batch multi-file edits in one call',
+          'cortex_move_file + cortex_delete_file — safe operations with sandbox',
+          'cortex_read_file: 10MB limit, offset+limit chunk reading',
+          'cortex_list_directory: recursive, depth, extensions filter',
+        ],
+      },
+      {
+        icon: Shield,
+        title: 'Unrestricted Mode + Agent Pool',
+        items: [
+          'filesystem_unrestricted_mode: AI can read/write any file on the machine',
+          'Still protected: /System, /etc, /bin, /sbin — warn instead of block',
+          'Dynamic model resolution from proxy live model list (no hardcoded names)',
+          'Tier-based auto-discover fallback when quota exhausted',
+          'Exponential backoff with jitter + Retry-After header support',
+        ],
+      },
+    ],
+  },
+  {
     version: '4.0.0',
     date: 'March 2026',
     tagline: 'GitHub Org Import, Hybrid Embedding, Smart Rate Limits',
-    latest: true,
     downloadUrl: 'https://github.com/hoainho/cortex/releases',
     groups: [
       {
