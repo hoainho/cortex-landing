@@ -4,6 +4,7 @@ import {
   Download, ChevronDown, ChevronRight,
   Bot, Brain, Wrench, Shield, Gauge, Blocks, Building,
   Terminal, GitBranch, Search, Database, Cpu, Sparkles, Globe,
+  ScanSearch,
   type LucideIcon
 } from 'lucide-react'
 import { SectionWrapper, SectionHeader } from './SectionWrapper'
@@ -25,10 +26,68 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '4.5.0',
+    date: 'March 2026',
+    tagline: '"Hippocampus" — 7-Tier Fuzzy Matching Engine with Indent-Aware Replacement',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: ScanSearch,
+        title: '7-Tier Fuzzy Matching Engine',
+        items: [
+          'Tier 1: Uniform indent detection — detects same-prefix offset, auto re-indents replacement (from Aider)',
+          'Tier 2: Whitespace-normalized — each line trimmed independently (from Cline)',
+          'Tier 3: Skip spurious leading blank line — removes LLM-added blanks, retries (from Aider)',
+          'Tier 4: Block anchor — first/last line anchors for 3+ line blocks (from Cline)',
+          'Tier 5: Ellipsis/dotdotdots — handles ... wildcards for unchanged sections (from Aider)',
+          'Tier 6: Levenshtein + bracket protection — distance-proportional threshold, structural lines require exact match (from Continue)',
+          'Tier 7: Variable-length window — tries ±10% of expected block size (from Aider)',
+        ],
+      },
+      {
+        icon: Brain,
+        title: 'Indent-Aware Replacement',
+        items: [
+          'When AI sends code with wrong indentation, Cortex detects the uniform offset and auto-corrects',
+          'Example: file has 4-space indent, AI sends 2-space → replacement auto-adjusted to 4-space',
+          'Works seamlessly with all fuzzy tiers that detect indentation differences',
+        ],
+      },
+      {
+        icon: Shield,
+        title: 'Quality Gate & Error Feedback',
+        items: [
+          'Fuzzy matches that would remove >50% of matched lines are rejected (prevents false positive corruption)',
+          'findSimilarBlock() searches for closest matching region with ±3 lines of context',
+          'Error messages now show full cascade: exact → uniform-indent → whitespace → skip-blank → anchor → ellipsis → levenshtein → variable-window',
+        ],
+      },
+      {
+        icon: Wrench,
+        title: 'New Tool: cortex_edit_file_lines',
+        items: [
+          'Edit by line range (1-indexed, inclusive) — no string matching needed',
+          'Supports delete (empty content), replace, and insert operations',
+          'Use with cortex_read_file offset+limit to verify exact line numbers first',
+          'Filesystem tools: 9 → 11 total',
+        ],
+      },
+      {
+        icon: Search,
+        title: 'Research-Backed Engineering',
+        items: [
+          'Techniques sourced from Aider (paul-gauthier/aider), Cline (cline/cline), and Continue (continuedev/continue)',
+          'Each tier addresses a specific real-world LLM failure mode: wrong indent, spurious blanks, ellipsis elision, structural lines',
+          'Bracket protection prevents catastrophic mis-matches on }, });, ]) lines',
+        ],
+      },
+    ],
+  },
+  {
     version: '4.4.0',
     date: 'March 2026',
     tagline: '"Thalamus" — Full-Stack Activation: Smart Routing, Loop Auto-Activation, Training Feedback',
-    latest: true,
     downloadUrl: 'https://github.com/hoainho/cortex/releases',
     groups: [
       {
