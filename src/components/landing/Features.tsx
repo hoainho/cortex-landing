@@ -11,9 +11,9 @@ const features = [
   },
   {
     icon: Users,
-    title: '12 Specialized Agents',
+    title: '15 Specialized Agents',
     description:
-      'Sisyphus (ultraworker), Hephaestus (debugger), Prometheus (planner), Atlas (heavy lifter), Oracle, Explore, Librarian + 5 specialists.',
+      'Sisyphus (ultraworker), Hephaestus (debugger), Prometheus (planner), Atlas (heavy lifter), Oracle, Explore, Librarian + 8 specialists. Full delegation network with tool whitelists per role.',
   },
   {
     icon: Code,
@@ -47,15 +47,15 @@ const features = [
   },
   {
     icon: Zap,
-    title: 'Smart Pipeline',
+    title: 'Smart Pipeline Routing',
     description:
-      'Intent classifier → path router → orchestrate/skill_chain/RAG. Message queue serializes requests. Parallel tool execution.',
+      'Category-first routing: deep/ultrabrain → orchestrate, visual → skill_chain, quick → RAG. >60% of queries now use multi-agent orchestration automatically.',
   },
   {
     icon: RefreshCw,
-    title: 'Self-Learning',
+    title: 'Loop Auto-Activation',
     description:
-      'Tracks your accepts, rejects, follow-ups. Learned reranker adjusts search weights. Gets smarter over time.',
+      'Say "không dừng" or "until done" → Ralph/Ultrawork loop activates automatically. Completion detection from response content. Training feedback on every interaction.',
   },
 ]
 

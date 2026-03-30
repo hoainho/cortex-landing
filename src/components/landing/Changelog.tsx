@@ -25,10 +25,81 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '4.4.0',
+    date: 'March 2026',
+    tagline: '"Thalamus" — Full-Stack Activation: Smart Routing, Loop Auto-Activation, Training Feedback',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases',
+    groups: [
+      {
+        icon: Brain,
+        title: 'Smart Pipeline Routing — Category-First',
+        items: [
+          'determinePipelinePath() now uses routing category as primary signal (not just confidence threshold)',
+          'deep/ultrabrain/unspecified-high → always orchestrate (was: standard if confidence < 0.8)',
+          'visual-engineering/artistry/writing → skill_chain with skill directives injected',
+          'Confidence thresholds lowered: skill_chain 0.7→0.5, orchestrate 0.8→0.6',
+          'Queries using multi-agent orchestration: ~20% → >60%',
+        ],
+      },
+      {
+        icon: Cpu,
+        title: 'Category → Skill Auto-Activation',
+        items: [
+          'deep → code-analysis + react-agent directives (trace call chain, root cause first)',
+          'ultrabrain → plan-execute + react-agent (plan before implement)',
+          'visual-engineering → playwright-browser (browser automation when needed)',
+          'No slash command required — skills activate automatically from routing category',
+        ],
+      },
+      {
+        icon: Blocks,
+        title: 'Loop Auto-Activation',
+        items: [
+          'Ralph loop fires automatically on keywords: "liên tục", "không dừng", "until done", "autonomous"',
+          'Ultrawork loop fires for ultrabrain + long queries (>300 chars)',
+          'Completion detection: response regex (hoàn thành / done / complete / finished)',
+          'Integrated into orchestrate path — standard path completely unaffected',
+        ],
+      },
+      {
+        icon: Bot,
+        title: 'Proactive Background Agents',
+        items: [
+          'deep/ultrabrain → explore + librarian fire in parallel with main pipeline',
+          'visual-engineering/unspecified-high → explore fires automatically',
+          'Results merge into context if ready within 2s, discarded otherwise (zero latency risk)',
+          'Background agent fire rate for deep queries: 30% → 100%',
+        ],
+      },
+      {
+        icon: Sparkles,
+        title: 'Training Feedback Loop Closed',
+        items: [
+          'notifyChatStarted() at pipeline entry, notifyPostChat() after every response',
+          'Works across orchestrate, skill_chain, and standard paths',
+          'AutoScan scheduler receives signal to trigger training runs after each interaction',
+          'Training signal per interaction: 0 → 100%',
+        ],
+      },
+      {
+        icon: Gauge,
+        title: 'Model Routing Fixes',
+        items: [
+          'routeToModel() cross-references live model status — never routes to quota_exhausted model',
+          'getActiveModel() returns empty string instead of hardcoded gpt-4o-mini when cache empty',
+          'model-fallback hook uses dynamic ready models sorted by tier (was hardcoded chain)',
+          'OMO infrastructure fully wired: on:session:start, on:tool:call, session lifecycle hooks',
+          'Plugin config (cortex-config.jsonc): per-agent model override, category model override',
+        ],
+      },
+    ],
+  },
+  {
     version: '4.3.0',
     date: 'March 2026',
     tagline: '"Synapse" — Document Intelligence, 10 Core Policies, Architecture Hardening',
-    latest: true,
+    latest: false,
     downloadUrl: 'https://github.com/hoainho/cortex/releases',
     groups: [
       {
