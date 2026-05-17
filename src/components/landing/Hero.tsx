@@ -25,7 +25,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
           </span>
-          v4.5 "Hippocampus" — 7-Tier Fuzzy Matching Engine, Indent-Aware Replacement
+          v5.0 "Eureka" — Extensibility Layer, MCP Server, Scheduler & Backup
         </motion.div>
 
         <motion.h1
@@ -58,7 +58,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <a
-            href="https://github.com/hoainho/cortex/releases"
+            href="https://github.com/hoainho/cortex/releases/download/v5.0.0/Cortex-5.0.0-arm64.dmg"
             className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-white font-semibold text-[15px] hover:bg-accent-dark transition-all active:scale-[0.97] shadow-lg shadow-accent/20"
           >
             <Download size={18} />

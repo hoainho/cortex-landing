@@ -26,10 +26,79 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '5.0.0',
+    date: 'May 2026',
+    tagline: '"Eureka" — Extensibility Layer, MCP Server, Scheduler & Backup, Slack + AppInsights Integrations',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v5.0.0/Cortex-5.0.0-arm64.dmg',
+    groups: [
+      {
+        icon: Blocks,
+        title: 'Extensibility Layer (Eureka Core)',
+        items: [
+          'MCP server — Cortex now acts as a Model Context Protocol server; other tools (Claude Desktop, OpenCode, etc.) can connect and use the local brain + skills as MCP tools',
+          'Artifact viewer with sandboxed React + HTML + SVG runtime — render previews inline in chat with isolated preview-runtime/ assets',
+          'Fork button — branch any conversation message into a parallel exploration thread',
+          'Global ErrorBoundary in the renderer with graceful crash recovery and auto-reload',
+        ],
+      },
+      {
+        icon: Gauge,
+        title: 'Scheduler & Background Jobs',
+        items: [
+          'Cron-style scheduled tasks: embedding-freshness checks, sync jobs, autoscan retries',
+          'ScheduledTasksPanel — view, pause, resume, trigger jobs manually from Settings',
+          'Per-job structured logs persisted in SQLite for replay + debugging',
+          'New scheduler IPC bridge for renderer ↔ scheduler communication',
+        ],
+      },
+      {
+        icon: Database,
+        title: 'Backup & Restore',
+        items: [
+          'One-click backup of brain state — SQLite + Qdrant + settings packed into a single .tar.gz',
+          'Restore any backup file with full state recovery in seconds',
+          'BackupRestorePanel UI in Settings — schedule recurring backups + manage history',
+          'Forward-compatible format — backups from v5.0.0 restore in future v5.x',
+        ],
+      },
+      {
+        icon: Globe,
+        title: 'New Integrations',
+        items: [
+          'Slack — connect a workspace; agents can read channels and send messages',
+          'Application Insights — query Azure telemetry/logs directly from chat',
+          'Software bundle import/export — share complete projects (code + brain + settings) as a single artifact',
+          'GitHub output router — smart routing of agent output to PR comments / issue threads',
+        ],
+      },
+      {
+        icon: Sparkles,
+        title: 'Chat & UI Overhaul',
+        items: [
+          'Chat store refactor — 1100-line monolith split into modular slices (conversation, message, thinking, mappers)',
+          'TrainingIntelligencePanel mounted globally for cross-project visibility',
+          'MessageBubble improvements — better fork affordance, artifact embedding, error recovery',
+          'ThinkingProcess redesign — streaming reasoning view with collapsible steps',
+        ],
+      },
+      {
+        icon: Wrench,
+        title: 'Build, Performance & Fixes',
+        items: [
+          'New dist:win and dist:all scripts — first-class Windows installer + multi-platform releases',
+          'Eliminated memory leaks in long-running chat sessions — re-render storms fixed',
+          'Lone-surrogate sanitization in LLM context — no more emoji-pair crashes',
+          'Smarter intent classifier — sharper chat / code-edit / search / plan detection',
+          'MCP manager — cleaner lifecycle + auto-reconnect on disconnect',
+        ],
+      },
+    ],
+  },
+  {
     version: '4.5.0',
     date: 'March 2026',
     tagline: '"Hippocampus" — 7-Tier Fuzzy Matching Engine with Indent-Aware Replacement',
-    latest: true,
     downloadUrl: 'https://github.com/hoainho/cortex/releases',
     groups: [
       {
