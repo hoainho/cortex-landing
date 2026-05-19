@@ -26,10 +26,48 @@ interface Release {
 
 const RELEASES: Release[] = [
   {
+    version: '5.0.1',
+    date: 'May 2026',
+    tagline: 'MCP reliability fix + YOLO Mode for fully autonomous tool use',
+    latest: true,
+    downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v5.0.1/Cortex-5.0.1-arm64.dmg',
+    groups: [
+      {
+        icon: Wrench,
+        title: 'MCP stdio Connection Fixes',
+        items: [
+          'Fixed spawn npx ENOENT when launching Cortex.app from Finder/Dock on macOS — GUI apps do not inherit shell PATH, now augmented with Node.js install locations (/usr/local/bin, /opt/homebrew/bin, NVM, Volta, fnm, pnpm, bun)',
+          'MCP child process stderr is now drained line-by-line and surfaced into error messages — no more opaque "Connection closed" failures',
+          'Spawned MCP children use HOME as cwd instead of inheriting Electron root cwd that broke many servers',
+          'Friendly error when binary cannot be resolved — actionable hints instead of cryptic ENOENT',
+        ],
+      },
+      {
+        icon: Shield,
+        title: 'YOLO Mode (Optional Auto-Approve)',
+        items: [
+          'New toggle in Settings → Permissions that auto-approves every tool call — file RW, MCP tools, GitHub API, web fetch, Bash',
+          'System paths (/System, /etc, /bin, /sbin, /var, /Library/Launch*) stay protected even when YOLO is on',
+          'User secrets (~/.ssh, ~/.aws, ~/.gnupg, ~/.config/gcloud, ~/.kube, ~/.docker, ~/.netrc) blocked unconditionally',
+          'Plan mode still overrides YOLO for writes — read-only review workflows preserved',
+          'Persists across restarts via settings DB; takes effect immediately without app reload',
+        ],
+      },
+      {
+        icon: Terminal,
+        title: 'Filesystem Access Ergonomics',
+        items: [
+          'File read/write tools (Read, Write, Edit, cortex_*_file variants) auto-approve in default mode — no dialog spam for routine operations',
+          'Paths outside the project repo are auto-approved when not in protected directories — read ~/Documents, ~/Desktop without prompts',
+          'Bash, network, and MCP tools still gated unless YOLO is on',
+        ],
+      },
+    ],
+  },
+  {
     version: '5.0.0',
     date: 'May 2026',
     tagline: '"Eureka" — Extensibility Layer, MCP Server, Scheduler & Backup, Slack + AppInsights Integrations',
-    latest: true,
     downloadUrl: 'https://github.com/hoainho/cortex/releases/download/v5.0.0/Cortex-5.0.0-arm64.dmg',
     groups: [
       {
